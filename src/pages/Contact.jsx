@@ -1,130 +1,137 @@
 import React from 'react';
 
 const Contact = () => {
-  const cards = [
+  const contactInfo = [
     {
       icon: '📞',
-      label: 'Hotline',
+      label: 'Hotline báo giá',
       value: '0947.088.423',
-      note: 'Trần Sỹ Vũ — Gọi trực tiếp',
-      full: false,
+      note: 'Lê Văn Khánh — Gọi trực tiếp 24/7',
+      color: 'bg-blue-50',
+      action: 'tel:0985374854'
     },
     {
       icon: '💬',
-      label: 'Zalo',
+      label: 'Zalo tư vấn',
       value: '0947.088.423',
-      note: 'Nhắn để báo giá siêu nhanh',
-      full: false,
+      note: 'Nhắn tin để nhận báo giá kèm ảnh mẫu',
+      color: 'bg-green-50',
+      action: 'https://zalo.me/0985374854'
     },
     {
       icon: '📍',
       label: 'Địa chỉ xưởng',
-      value: '[Điền địa chỉ xưởng của bạn tại đây]',
-      note: 'Khách hàng có thể đến xem hàng trực tiếp tại xưởng',
-      full: true,
+      value: 'Thôn Liên Trì, Xã Bình Hiệp, Huyện Bình Sơn, Quảng Ngãi', // Vũ điền địa chỉ thật vào đây nhé
+      note: 'Mở cửa: 07:30 - 17:30 (Thứ 2 - Thứ 7)',
+      color: 'bg-orange-50',
+      action: 'https://www.google.com/maps'
     },
   ];
 
   return (
-    <div style={{ fontFamily: "'Be Vietnam Pro', sans-serif", background: '#F0F7FF', padding: '2.5rem 1.5rem', minHeight: '100vh' }}>
-
-      {/* Header */}
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <span style={{ fontSize: 11, fontWeight: 700, color: '#FF6F00', letterSpacing: '0.14em', textTransform: 'uppercase', display: 'block', marginBottom: '0.5rem' }}>
-          ✦ Liên hệ với chúng tôi
-        </span>
-        <h1 style={{ fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', fontWeight: 800, color: '#1A237E', margin: '0 0 .5rem' }}>
-          Đặt hàng &amp; Báo giá nhanh
-        </h1>
-        <p style={{ fontSize: '0.93rem', color: '#546E7A', lineHeight: 1.6, margin: 0 }}>
-          Nhắn Zalo hoặc gọi trực tiếp để nhận báo giá tốt nhất — thùng số lượng lớn hoặc theo kích thước riêng.
-        </p>
+    <div className="bg-gray-50 min-h-screen font-be-vietnam">
+      
+      {/* ── HEADER ── */}
+      <div className="bg-white border-b py-16">
+        <div className="container mx-auto px-4 text-center">
+          <span className="text-[11px] font-black text-orange-500 uppercase tracking-[0.2em] mb-4 inline-block">
+            ✦ Kết nối với KhanhBox ✦
+          </span>
+          <h1 className="text-4xl md:text-5xl font-black text-blue-900 uppercase tracking-tighter mb-4">
+            Liên hệ đặt hàng
+          </h1>
+          <p className="text-gray-500 max-w-2xl mx-auto font-medium leading-relaxed">
+            Quý khách cần tư vấn quy cách thùng, báo giá số lượng lớn hoặc đặt in logo thương hiệu? 
+            Hãy liên hệ với chúng tôi qua các kênh dưới đây.
+          </p>
+        </div>
       </div>
 
-      {/* Info cards */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-        gap: 14,
-        maxWidth: 700,
-        margin: '0 auto 1.5rem',
-      }}>
-        {cards.map((c, i) => (
-          <div
-            key={i}
-            style={{
-              background: '#fff',
-              border: '1.5px solid #BBDEFB',
-              borderRadius: 14,
-              padding: '1.3rem 1.2rem',
-              display: 'flex',
-              alignItems: 'flex-start',
-              gap: 14,
-              gridColumn: c.full ? '1 / -1' : undefined,
-            }}
-          >
-            <div style={{
-              width: 42, height: 42, minWidth: 42,
-              background: '#E3F2FD', borderRadius: 10,
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 20,
-            }}>
-              {c.icon}
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-5xl mx-auto">
+          
+          {/* ── CONTACT CARDS ── */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {contactInfo.map((item, index) => (
+              <a 
+                href={item.action}
+                key={index}
+                target={item.icon === '💬' ? "_blank" : "_self"}
+                rel="noreferrer"
+                className="bg-white p-8 rounded-[32px] shadow-sm border border-gray-100 hover:shadow-xl hover:translate-y-[-8px] transition-all duration-300 group"
+              >
+                <div className={`${item.color} w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform`}>
+                  {item.icon}
+                </div>
+                <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest block mb-2">
+                  {item.label}
+                </span>
+                <h3 className="text-xl font-black text-blue-900 mb-3 break-words">
+                  {item.value}
+                </h3>
+                <p className="text-sm text-gray-500 leading-relaxed font-medium">
+                  {item.note}
+                </p>
+              </a>
+            ))}
+          </div>
+
+          {/* ── MAP & FORM AREA ── */}
+          <div className="bg-white rounded-[40px] overflow-hidden shadow-sm border border-gray-100 flex flex-col md:flex-row">
+            
+            {/* Cột trái: Lời nhắn */}
+            <div className="p-10 md:p-16 flex-1 bg-blue-900 text-white">
+              <h2 className="text-3xl font-black uppercase tracking-tighter mb-6">
+                Xưởng sản xuất<br/>Trực tiếp
+              </h2>
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <span className="text-orange-400 font-bold">✓</span>
+                  <p className="text-blue-100 text-sm">Hỗ trợ thiết kế và làm mẫu miễn phí cho đơn hàng lớn.</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="text-orange-400 font-bold">✓</span>
+                  <p className="text-blue-100 text-sm">Giao hàng tận nơi khu vực nội thành và các tỉnh lân cận.</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="text-orange-400 font-bold">✓</span>
+                  <p className="text-blue-100 text-sm">Xuất hóa đơn VAT đầy đủ theo yêu cầu doanh nghiệp.</p>
+                </div>
+              </div>
+              
+              <div className="mt-12 pt-12 border-t border-blue-800">
+                <p className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-2">Đại diện kinh doanh</p>
+                <p className="text-xl font-black">Lê Văn Khánh</p>
+              </div>
             </div>
-            <div>
-              <span style={{ fontSize: 11, fontWeight: 700, color: '#FF6F00', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: 3 }}>
-                {c.label}
-              </span>
-              <span style={{ fontSize: c.full ? '0.97rem' : '1.1rem', fontWeight: 800, color: '#1A237E', display: 'block', lineHeight: 1.2 }}>
-                {c.value}
-              </span>
-              <span style={{ fontSize: 12, color: '#78909C', marginTop: 3, display: 'block' }}>
-                {c.note}
-              </span>
+
+            {/* Cột phải: Bản đồ (Placeholder) */}
+            <div className="flex-1 bg-gray-200 min-h-[350px] relative">
+               {/* Thay src iframe dưới đây bằng mã nhúng bản đồ Google Maps của xưởng Vũ */}
+               <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.1056581958616!2d108.2097144758535!3d16.05995433971485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219b42bf11f2d%3A0x6968037a3465e9!2sDanang%20International%20Airport!5e0!3m2!1sen!2svn!4v1700000000000!5m2!1sen!2svn" 
+                className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                style={{ border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Bản đồ xưởng KhanhBox"
+              ></iframe>
+            </div>
+
+          </div>
+
+          {/* ── FOOTER QUẢNG CÁO ── */}
+          <div className="mt-20 text-center">
+            <p className="text-sm font-bold text-gray-400 uppercase tracking-[0.3em] mb-8">Đối tác vận chuyển tin cậy</p>
+            <div className="flex flex-wrap justify-center gap-12 opacity-30 grayscale">
+              <span className="text-2xl font-black text-gray-800">GHTK</span>
+              <span className="text-2xl font-black text-gray-800">Viettel Post</span>
+              <span className="text-2xl font-black text-gray-800">J&T Express</span>
+              <span className="text-2xl font-black text-gray-800">GHN</span>
             </div>
           </div>
-        ))}
-      </div>
 
-      {/* CTA */}
-      <div style={{
-        maxWidth: 700,
-        margin: '0 auto',
-        background: '#1565C0',
-        borderRadius: 14,
-        padding: '1.6rem 1.5rem',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: 12,
-      }}>
-        <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.9rem', lineHeight: 1.6, textAlign: 'center', margin: 0 }}>
-          Quý khách có nhu cầu đặt thùng carton số lượng lớn hoặc theo kích thước riêng —
-          liên hệ ngay để được tư vấn và báo giá tốt nhất.
-        </p>
-        <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center' }}>
-          <a
-            href="https://zalo.me/0947088423"
-            style={{
-              background: '#00B14F', color: '#fff', fontFamily: "'Be Vietnam Pro', sans-serif",
-              fontWeight: 700, fontSize: '0.95rem', padding: '12px 26px',
-              border: 'none', borderRadius: 9, textDecoration: 'none',
-              display: 'inline-flex', alignItems: 'center', gap: 8,
-            }}
-          >
-            💬 Nhắn Zalo ngay
-          </a>
-          <a
-            href="tel:0947088423"
-            style={{
-              background: 'rgba(255,255,255,0.15)', color: '#fff', fontFamily: "'Be Vietnam Pro', sans-serif",
-              fontWeight: 700, fontSize: '0.95rem', padding: '11px 24px',
-              border: '1.5px solid rgba(255,255,255,0.4)', borderRadius: 9, textDecoration: 'none',
-              display: 'inline-flex', alignItems: 'center', gap: 8,
-            }}
-          >
-            📞 Gọi ngay
-          </a>
         </div>
       </div>
     </div>

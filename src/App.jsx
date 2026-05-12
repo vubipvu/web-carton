@@ -26,7 +26,7 @@ function App() {
         {/* Nút Zalo cố định ở góc màn hình */}
         <div className="fixed bottom-6 right-6 z-50">
           <a 
-            href="https://zalo.me/0947088423" 
+            href="https://zalo.me/0985374854" 
             target="_blank" 
             rel="noreferrer"
             className="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition-all flex items-center justify-center font-bold"

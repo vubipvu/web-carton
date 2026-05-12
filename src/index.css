@@ -7,3 +7,14 @@ body {
   @apply bg-gray-50 text-gray-900;
   font-family: 'Inter', sans-serif;
 }
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 25s linear infinite;
+  min-width: 200%; /* Đảm bảo nội dung đủ dài để lặp lại */
+}

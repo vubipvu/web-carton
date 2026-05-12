@@ -39,7 +39,7 @@ const Blog = () => {
                 {featuredPost.summary}
               </p>
               <div className="flex items-center text-sm text-gray-400 font-medium">
-                <span>Vũ Trần</span>
+                <span>KhanhBox</span>
                 <span className="mx-2">•</span>
                 <span>{featuredPost.date}</span>
               </div>
