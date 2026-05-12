@@ -119,7 +119,7 @@ const ProductDetail = () => {
               {/* Nút hành động chính */}
               <div className="space-y-4">
                 <a 
-                  href={`https://zalo.me/0947088423?text=Chào KhanhBox, tôi muốn báo giá sản phẩm: ${product.name}`}
+                  href={`https://zalo.me/0985374854?text=Chào KhanhBox, tôi muốn báo giá sản phẩm: ${product.name}`}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-3 bg-blue-700 text-white w-full py-5 rounded-[20px] font-black text-lg uppercase tracking-widest hover:bg-orange-500 transition-all duration-500 shadow-xl shadow-blue-100 hover:shadow-orange-100 active:scale-95"
@@ -129,7 +129,7 @@ const ProductDetail = () => {
                 
                 <div className="flex gap-4">
                   <a 
-                    href="tel:0947088423"
+                    href="tel:0985374854"
                     className="flex-1 flex items-center justify-center gap-2 border-2 border-gray-100 py-4 rounded-[20px] font-black text-xs text-gray-600 hover:bg-gray-50 transition-all uppercase tracking-widest"
                   >
                     📞 Gọi tư vấn

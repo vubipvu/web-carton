@@ -75,7 +75,7 @@ const Products = () => {
                 <div className="relative z-10">
                   <p className="text-[10px] font-black text-blue-300 uppercase tracking-widest mb-2">Tư vấn kỹ thuật</p>
                   <p className="text-lg font-black mb-6 leading-tight">Bạn cần kích thước riêng?</p>
-                  <a href="tel:0947088423" className="block text-center bg-white text-blue-900 py-3 rounded-xl font-black text-xs hover:bg-orange-500 hover:text-white transition-all shadow-lg">
+                  <a href="tel:0985374854" className="block text-center bg-white text-blue-900 py-3 rounded-xl font-black text-xs hover:bg-orange-500 hover:text-white transition-all shadow-lg">
                     GỌI TƯ VẤN NGAY
                   </a>
                 </div>

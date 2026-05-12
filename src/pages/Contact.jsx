@@ -5,7 +5,7 @@ const Contact = () => {
     {
       icon: '📞',
       label: 'Hotline báo giá',
-      value: '0947.088.423',
+      value: '0985374854',
       note: 'Lê Văn Khánh — Gọi trực tiếp 24/7',
       color: 'bg-blue-50',
       action: 'tel:0985374854'
@@ -13,19 +13,19 @@ const Contact = () => {
     {
       icon: '💬',
       label: 'Zalo tư vấn',
-      value: '0947.088.423',
+      value: '0985374854',
       note: 'Nhắn tin để nhận báo giá kèm ảnh mẫu',
       color: 'bg-green-50',
       action: 'https://zalo.me/0985374854'
     },
     {
-      icon: '📍',
-      label: 'Địa chỉ xưởng',
-      value: 'Thôn Liên Trì, Xã Bình Hiệp, Huyện Bình Sơn, Quảng Ngãi', // Vũ điền địa chỉ thật vào đây nhé
-      note: 'Mở cửa: 07:30 - 17:30 (Thứ 2 - Thứ 7)',
-      color: 'bg-orange-50',
-      action: 'https://www.google.com/maps'
-    },
+  icon: '📍',
+  label: 'Địa chỉ xưởng',
+  value: '39 Đường 37, Khu dân cư Vạn Phúc, Phường Hiệp Bình Phước, Thành phố Thủ Đức, TP. Hồ Chí Minh.',
+  note: 'Mở cửa: 07:30 - 17:30 (Thứ 2 - Thứ 7)',
+  color: 'bg-orange-50',
+  action: 'https://maps.google.com/?q=39+Đường+37+KDC+Vạn+Phúc+Hiệp+Bình+Phước+Thủ+Đức'
+}
   ];
 
   return (
@@ -108,14 +108,15 @@ const Contact = () => {
             {/* Cột phải: Bản đồ (Placeholder) */}
             <div className="flex-1 bg-gray-200 min-h-[350px] relative">
                {/* Thay src iframe dưới đây bằng mã nhúng bản đồ Google Maps của xưởng Vũ */}
-               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.1056581958616!2d108.2097144758535!3d16.05995433971485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219b42bf11f2d%3A0x6968037a3465e9!2sDanang%20International%20Airport!5e0!3m2!1sen!2svn!4v1700000000000!5m2!1sen!2svn" 
-                className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
-                style={{ border: 0 }} 
-                allowFullScreen="" 
-                loading="lazy" 
+               <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.563302980327!2d106.70827700880919!3d10.84469315788988!2m3!1f0!2f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175286fc34faef9%3A0x3ea2762231d498ba!2zxJDGsOG7nW5nIDM3LzM5IFAsIEtodSDEkcO0IFRo4buLIFbhuqFuIFBow7pjLCBIaeG7h3AgQsOsbmgsIEjhu5MgQ2jDrSBNaW5oIDcwMDAwMCwgVmnhu4dCBuYW0!5e0!3m2!1svi!2s!4v1778567566697!5m2!1svi!2s"
+                width="100%"
+                height="450"
+                style={{ border: 0, borderRadius: "16px" }}
+                allowFullScreen=""
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Bản đồ xưởng KhanhBox"
+                title="Google Map"
               ></iframe>
             </div>
 

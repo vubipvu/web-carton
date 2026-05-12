@@ -24,7 +24,7 @@ const Navbar = () => {
             {/* Logo & Tên thương hiệu */}
             <Link to="/" className="flex flex-col">
               <span className="text-xl md:text-2xl font-black text-blue-800 tracking-tighter leading-none">
-                CARTON VŨ TRẦN
+                KhanhBox
               </span>
               <span className="text-[10px] text-orange-500 font-bold tracking-[0.2em] uppercase">
                 Packaging Solutions

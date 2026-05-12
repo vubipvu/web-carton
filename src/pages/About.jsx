@@ -52,7 +52,7 @@ const About = () => {
           <div className="relative order-2 lg:order-1">
             <div className="absolute -bottom-6 -right-6 w-full h-full bg-orange-50 rounded-[40px] -z-10"></div>
             <img 
-              src="/images/image.png" 
+              src="/images/bgr.png" 
               alt="Production" 
               className="rounded-[40px] shadow-2xl w-full h-[500px] object-cover" 
             />
@@ -163,7 +163,7 @@ const About = () => {
               Đừng để chi phí bao bì làm giảm lợi nhuận của bạn. Hãy để KhanhBox tư vấn giải pháp phù hợp nhất về kích thước và chất liệu giấy.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <a href="https://zalo.me/0947088423" className="bg-blue-700 text-white px-10 py-5 rounded-2xl font-black hover:bg-blue-800 transition-all shadow-xl shadow-blue-100 uppercase tracking-widest text-sm">
+              <a href="https://zalo.me/0985374854" className="bg-blue-700 text-white px-10 py-5 rounded-2xl font-black hover:bg-blue-800 transition-all shadow-xl shadow-blue-100 uppercase tracking-widest text-sm">
                 Nhận báo giá ngay
               </a>
               <Link to="/lien-he" className="bg-white text-blue-900 border border-blue-200 px-10 py-5 rounded-2xl font-black hover:bg-gray-50 transition-all uppercase tracking-widest text-sm">
