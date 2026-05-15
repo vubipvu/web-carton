@@ -1,61 +1,133 @@
 export const products = [
   {
-    id: 0,
-    name: "Hộp Carton 3 lớp A1",
-    category: "Hộp Carton",
-    description: "Hộp sóng B, C bền dai, chịu lực tốt, phù hợp cho đóng gói hàng gia dụng, linh kiện điện tử và hàng tiêu dùng nhanh.",
-    image: "/images/hop.png",
-    // Thêm mảng ảnh ở đây để xem được nhiều ảnh
-    images: [
-      "/images/hop.png", 
-      "/images/hop_detail_1.png", 
-      "/images/hop_detail_2.png"
-    ],
-    size: "Theo yêu cầu",
-    paperType: "Sóng B, C (3 lớp)",
-    feature: "Chống va đập, bảo vệ sản phẩm tối ưu."
-  },
-  {
     id: 1,
-    name: "Thùng Carton 3 lớp A1",
-    category: "Thùng Carton",
-    description: "Dòng thùng carton tiêu chuẩn cho vận chuyển, chất liệu giấy cứng cáp, bề mặt mịn dễ dàng in ấn thương hiệu.",
-    image: "/images/thung.png",
+    name: "Hộp Carton 3 lớp tiêu chuẩn",
+    category: "Hộp Carton",
+    description: "Hộp carton 3 lớp sóng B/C, phù hợp hàng nhẹ, đóng gói shop online.",
+    image: "/images/carton3lop/hop.png",
     images: [
-      "/images/thung.png",
-      "/images/thung_detail_1.png",
-      "/images/thung_detail_2.png"
+      "/images/carton3lop/hop.png", 
+      "/images/carton3lop/carton3lop3d.png",
+      "/images/baoquan.png"
     ],
-    size: "Theo yêu cầu",
-    paperType: "Giấy nâu Việt Nam / Ngoại nhập",
-    feature: "Dễ dàng lắp ráp, tiết kiệm diện tích lưu kho."
+    size: "Theo kích thước có sẵn",
+    paperType: "3 lớp (sóng B/C)",
+    feature: "Giá rẻ, phổ biến",
   },
   {
     id: 2,
-    name: "Băng keo trong 1kg",
-    category: "Băng Keo",
-    description: "Băng keo độ dính cao 50mic, lõi nhựa mỏng giúp tăng lượng keo thực tế, siêu tiết kiệm cho các đơn vị đóng gói số lượng lớn.",
-    image: "/images/bangkeo.png",
+    name: "Hộp Carton 5 lớp cao cấp",
+    category: "Hộp Carton",
+    description: "Hộp carton 5 lớp chắc chắn, dùng cho hàng nặng và dễ vỡ.",
+    image: "/images/hop_carton/carton5lop.png",
     images: [
-      "/images/bangkeo.png",
-      "/images/bangkeo_lon.png"
+      "/images/hop_carton/carton5lop.png", 
+      "/images/hop_carton/carton5lop3D.png",
+      "/images/baoquan.png"
     ],
-    size: "4.8cm x 100y",
-    paperType: "Nhựa OPP độ dính cao",
-    feature: "Không đứt quãng khi kéo mạnh, bám dính tốt trên mọi bề mặt thùng."
+    size: "Theo kích thước có sẵn",
+    paperType: "5 lớp (BC)",
+    feature: "Chịu lực cao",
   },
   {
     id: 3,
+    name: "Hộp Carton Custom Size",
+    category: "Hộp Carton",
+    description: "Hộp sản xuất theo kích thước riêng theo yêu cầu khách hàng.",
+    image: "/images/hop_custom/hopcs.png",
+    images: [
+      "/images/hop_custom/hopcs.png",
+      "/images/hop_custom/bangsize.png",
+      "/images/hop_custom/Khon.png"
+    ],
+    size: "Dài x Rộng x Cao theo yêu cầu",
+    paperType: "3 / 5 lớp",
+    feature: "Cắt theo size riêng"
+  },
+  {
+    id: 4,
+    name: "Thùng Carton ship COD",
+    category: "Thùng Carton",
+    description: "Thùng dùng cho shop online, dễ gấp, tiện vận chuyển.",
+    image: "/images/thungship/thung.png",
+    images: [
+      "/images/thungship/thung.png",
+      "/images/thungship/thungnho.png",
+      "/images/thungship/thungship3d.png"
+    ],
+    size: "Nhiều size",
+    paperType: "3 lớp",
+    feature: "Phổ biến cho thương mại điện tử",
+  },
+  {
+    id: 5,
+    name: "Thùng Carton xuất khẩu 5 lớp",
+    category: "Thùng Carton",
+    description: "Thùng chịu lực cao, dùng cho xuất khẩu hàng hóa.",
+    image: "/images/thung5lop/thung5lop.png",
+    images: [
+      "/images/thung5lop/thung5lop.png",
+      "/images/thung5lop/thungchiuluc.png",
+      "/images/thung5lop/thungxeppallet.png"
+    ],
+    size: "Theo tiêu chuẩn xuất khẩu",
+    paperType: "5 lớp BC",
+    feature: "Đạt chuẩn vận chuyển quốc tế",
+  },
+  {
+    id: 7,
+    name: "Băng keo trong OPP",
+    category: "Băng Keo",
+    description: "Băng keo trong suốt, dán thùng carton phổ biến nhất.",
+    image: "/images/bangkeo.png",
+    images: [
+      "/images/bangkeo.png",
+      "/images/baoquan.png"
+    ],
+    size: "4.8cm x 100y",
+    paperType: "OPP",
+    feature: "Dính chắc, giá rẻ",
+  },
+  {
+    id: 8,
+    name: "Băng keo đục (nâu)",
+    category: "Băng Keo",
+    description: "Băng keo màu nâu dùng cho thùng hàng nặng.",
+    image: "/images/bangkeo.png", 
+    images: [
+      "/images/bangkeo.png",
+      "/images/baoquan.png"
+    ],
+    size: "4.8cm x 100y",
+    paperType: "OPP đục",
+    feature: "Che kín tốt",
+  },
+  {
+    id: 9,
     name: "Giấy A4 Double A 70gsm",
     category: "Văn Phòng Phẩm",
-    description: "Giấy in cao cấp Double A nổi tiếng với độ trắng mịn, độ cản quang cao, giúp in hai mặt không bị lem và đặc biệt không kẹt giấy.",
+    description: "Giấy in cao cấp, trắng mịn, in 2 mặt không lem.",
     image: "/images/a4.png",
     images: [
       "/images/a4.png",
-      "/images/a4_hop.png"
+      "/images/baoquan.png"
     ],
-    size: "Khổ A4 (210x297mm)",
-    paperType: "70gsm (Chất lượng cao)",
-    feature: "Thân thiện môi trường, bảo vệ đầu phun máy in."
+    size: "A4",
+    paperType: "70gsm",
+    feature: "Chất lượng cao",
+  },
+  {
+    id: 14,
+    name: "Bút bi Thiên Long TL-079",
+    category: "Văn Phòng Phẩm",
+    description: "Bút bi viết mượt, phổ biến trong học tập và văn phòng.",
+    image: "/images/butbi.png", 
+    images: [
+      "/images/butbi.png",
+      "/images/baoquan.png"
+    ],
+    size: "0.5mm",
+    paperType: "Nhựa + mực dầu",
+    feature: "Viết êm, bền mực",
   }
 ];

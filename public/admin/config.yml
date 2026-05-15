@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: vubipvu/web-carton # Đã đúng theo link của bạn
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: /auth
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "quan_ly_kho"
+    label: "Hệ Thống Kho KhanhBox"
+    files:
+      - label: "Tất cả sản phẩm"
+        name: "products_file"
+        file: "src/data/products.json"
+        allow_add: true
+        fields:
+          - label: "Danh sách sản phẩm"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "number"}
+              - {label: "Tên sản phẩm", name: "name", widget: "string"}
+              - {label: "Danh mục", name: "category", widget: "select", options: ["Hộp Carton", "Thùng Carton", "Băng Keo", "Văn Phòng Phẩm"]}
+              - {label: "Mô tả", name: "description", widget: "text"}
+              - {label: "Ảnh đại diện", name: "image", widget: "image"}
+              - {label: "Kích thước", name: "size", widget: "string"}
+              - {label: "Loại giấy", name: "paperType", widget: "string"}
+              - {label: "Đặc điểm", name: "feature", widget: "string"}
