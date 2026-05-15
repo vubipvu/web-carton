@@ -3,8 +3,8 @@ backend:
   repo: vubipvu/web-carton
   branch: main
   # Sử dụng cổng xác thực cộng đồng (ổn định hơn tự làm trên Netlify)
-  base_url: https://khanhbox-auth.vercel.app
-  auth_endpoint: /auth
+  base_url: https://khanhbox-auth.vercel.app  
+  auth_endpoint: api/index
 
 media_folder: "public/images"
 public_folder: "/images"
