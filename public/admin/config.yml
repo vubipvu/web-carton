@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: vubipvu/web-carton # Đúng tên repo của Vũ
+  repo: vubipvu/web-carton
   branch: main
   base_url: https://khanhbox-auth.vercel.app
   auth_endpoint: api/index
